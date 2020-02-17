@@ -1,0 +1,33 @@
+{
+  "name": "googlebooks",
+  "version": "1.0.0",
+  "description": "Homework for bootcamp",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore '../client/*'\" \"npm run client\"",
+    "client": "cd ../client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd ../client && npm install",
+    "build": "cd ../client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mike10951/googlebooks"
+  },
+  "keywords": [
+    "express",
+    "react"
+  ],
+  "author": "mike10951",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

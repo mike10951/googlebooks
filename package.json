@@ -26,5 +26,8 @@
   "homepage": "https://github.com/mike10951/googlebooks#readme",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "if-env": "^1.0.4"
   }
 }
